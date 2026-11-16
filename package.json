@@ -1,0 +1,29 @@
+{
+  "name": "nexusplay-master-edition",
+  "version": "4.0.0",
+  "description": "NexusPlay v4.0 Master Edition - PC & Emulator Game Launcher, System Booster & Save Manager",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis portable"
+  },
+  "build": {
+    "appId": "com.nexusplay.master",
+    "productName": "NexusPlay v4.0 Master",
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^29.1.0",
+    "electron-builder": "^24.13.3"
+  }
+}
