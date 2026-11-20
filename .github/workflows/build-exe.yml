@@ -13,12 +13,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install Dependencies
         run: npm install
@@ -27,7 +27,7 @@ jobs:
         run: npm run dist
 
       - name: Upload Compiled .EXE Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: NexusPlay-v4.0-Windows-EXE
           path: dist/*.exe
